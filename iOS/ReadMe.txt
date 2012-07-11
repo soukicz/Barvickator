@@ -1,0 +1,1 @@
+Sem vytvoøit zdrojáky pro iOS verzi.
