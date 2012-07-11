@@ -1,10 +1,24 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html> 
+<html lang="en">
     <head>
-        <title></title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>HTML5 Exploding Camera Demo</title> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=yes">
     </head>
+
     <body>
-        <div>TODO write content</div>
+        <video autoplay></video>
+
+        <script>
+            var onFailSoHard = function(e) {
+                console.log('Reeeejected!', e);
+            };
+
+            // Not showing vendor prefixes.
+            navigator.webkitGetUserMedia({video: true, audio: true}, function(localMediaStream) {
+            var video = document.querySelector('video');
+            video.src = window.webkitURL.createObjectURL(localMediaStream);
+            }, onFailSoHard);
+        </script>
     </body>
 </html>
