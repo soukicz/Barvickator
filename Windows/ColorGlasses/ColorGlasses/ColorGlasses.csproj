@@ -114,21 +114,21 @@
     <Content Include="..\..\..\html5\jquery.mobile.theme-1.1.0.css">
       <Link>www\jquery.mobile.theme-1.1.0.css</Link>
     </Content>
-    <Resource Include="..\..\..\html5\themes\images\ajax-loader.gif">
+    <Content Include="..\..\..\html5\themes\images\ajax-loader.gif">
       <Link>www\themes\images\ajax-loader.gif</Link>
-    </Resource>
-    <Resource Include="..\..\..\html5\themes\images\icons-18-black.png">
+    </Content>
+    <Content Include="..\..\..\html5\themes\images\icons-18-black.png">
       <Link>www\themes\images\icons-18-black.png</Link>
-    </Resource>
-    <Resource Include="..\..\..\html5\themes\images\icons-18-white.png">
+    </Content>
+    <Content Include="..\..\..\html5\themes\images\icons-18-white.png">
       <Link>www\themes\images\icons-18-white.png</Link>
-    </Resource>
-    <Resource Include="..\..\..\html5\themes\images\icons-36-black.png">
+    </Content>
+    <Content Include="..\..\..\html5\themes\images\icons-36-black.png">
       <Link>www\themes\images\icons-36-black.png</Link>
-    </Resource>
-    <Resource Include="..\..\..\html5\themes\images\icons-36-white.png">
+    </Content>
+    <Content Include="..\..\..\html5\themes\images\icons-36-white.png">
       <Link>www\themes\images\icons-36-white.png</Link>
-    </Resource>
+    </Content>
     <Content Include="..\..\..\html5\themes\prvni.css">
       <Link>www\themes\prvni.css</Link>
     </Content>

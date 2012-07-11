@@ -7,12 +7,12 @@
     <FilePath Value="www\jquery.mobile-1.1.0.js"/>
     <FilePath Value="www\jquery.mobile.structure-1.1.0.css"/>
     <FilePath Value="www\jquery.mobile.theme-1.1.0.css"/>
-    <FilePath Value="www\themes\prvni.css"/>
-    <FilePath Value="www\themes\prvni.min.css"/>
     <FilePath Value="www\themes\images\ajax-loader.gif"/>
     <FilePath Value="www\themes\images\icons-18-black.png"/>
     <FilePath Value="www\themes\images\icons-18-white.png"/>
     <FilePath Value="www\themes\images\icons-36-black.png"/>
     <FilePath Value="www\themes\images\icons-36-white.png"/>
+    <FilePath Value="www\themes\prvni.css"/>
+    <FilePath Value="www\themes\prvni.min.css"/>
     <FilePath Value="www\cordova-1.9.0.js"/>
 </CordovaSourceDictionary>
