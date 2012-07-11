@@ -1,0 +1,14 @@
+C:\web\git\Barvickator\Windows\ColorGlasses\ColorGlasses\Bin\Release\ApplicationIcon.png
+C:\web\git\Barvickator\Windows\ColorGlasses\ColorGlasses\Bin\Release\Background.png
+C:\web\git\Barvickator\Windows\ColorGlasses\ColorGlasses\Bin\Release\ColorGlasses.dll
+C:\web\git\Barvickator\Windows\ColorGlasses\ColorGlasses\Bin\Release\ColorGlasses.pdb
+C:\web\git\Barvickator\Windows\ColorGlasses\ColorGlasses\Bin\Release\AppManifest.xaml
+C:\web\git\Barvickator\Windows\ColorGlasses\ColorGlasses\Bin\Release\ColorGlasses.xap
+C:\web\git\Barvickator\Windows\ColorGlasses\ColorGlasses\Bin\Release\WP7CordovaClassLib.dll
+C:\web\git\Barvickator\Windows\ColorGlasses\ColorGlasses\obj\Release\ResolveAssemblyReference.cache
+C:\web\git\Barvickator\Windows\ColorGlasses\ColorGlasses\obj\Release\App.g.i.cs
+C:\web\git\Barvickator\Windows\ColorGlasses\ColorGlasses\obj\Release\MainPage.g.i.cs
+C:\web\git\Barvickator\Windows\ColorGlasses\ColorGlasses\obj\Release\ColorGlasses.g.resources
+C:\web\git\Barvickator\Windows\ColorGlasses\ColorGlasses\obj\Release\ColorGlasses.dll
+C:\web\git\Barvickator\Windows\ColorGlasses\ColorGlasses\obj\Release\ColorGlasses.pdb
+C:\web\git\Barvickator\Windows\ColorGlasses\ColorGlasses\obj\Release\XapCacheFile.xml
