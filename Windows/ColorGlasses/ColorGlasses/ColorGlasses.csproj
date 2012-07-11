@@ -96,14 +96,49 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\..\..\html5\index.html">
+      <Link>www\index.html</Link>
+    </Content>
+    <Content Include="..\..\..\html5\jquery.js">
+      <Link>www\jquery.js</Link>
+    </Content>
+    <Content Include="..\..\..\html5\jquery.mobile-1.1.0.css">
+      <Link>www\jquery.mobile-1.1.0.css</Link>
+    </Content>
+    <Content Include="..\..\..\html5\jquery.mobile-1.1.0.js">
+      <Link>www\jquery.mobile-1.1.0.js</Link>
+    </Content>
+    <Content Include="..\..\..\html5\jquery.mobile.structure-1.1.0.css">
+      <Link>www\jquery.mobile.structure-1.1.0.css</Link>
+    </Content>
+    <Content Include="..\..\..\html5\jquery.mobile.theme-1.1.0.css">
+      <Link>www\jquery.mobile.theme-1.1.0.css</Link>
+    </Content>
+    <Resource Include="..\..\..\html5\themes\images\ajax-loader.gif">
+      <Link>www\themes\images\ajax-loader.gif</Link>
+    </Resource>
+    <Resource Include="..\..\..\html5\themes\images\icons-18-black.png">
+      <Link>www\themes\images\icons-18-black.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\html5\themes\images\icons-18-white.png">
+      <Link>www\themes\images\icons-18-white.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\html5\themes\images\icons-36-black.png">
+      <Link>www\themes\images\icons-36-black.png</Link>
+    </Resource>
+    <Resource Include="..\..\..\html5\themes\images\icons-36-white.png">
+      <Link>www\themes\images\icons-36-white.png</Link>
+    </Resource>
+    <Content Include="..\..\..\html5\themes\prvni.css">
+      <Link>www\themes\prvni.css</Link>
+    </Content>
+    <Content Include="..\..\..\html5\themes\prvni.min.css">
+      <Link>www\themes\prvni.min.css</Link>
+    </Content>
     <Content Include="CordovaSourceDictionary.xml" />
     <None Include="BuildManifestProcessor.js" />
     <Content Include="GapLib\WP7CordovaClassLib.dll" />
     <Content Include="www\cordova-1.9.0.js" />
-    <Content Include="www\index.html">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="www\master.css" />
     <None Include="cordova\debug.bat" />
     <None Include="cordova\emulate.bat" />
     <None Include="Properties\AppManifest.xml">
