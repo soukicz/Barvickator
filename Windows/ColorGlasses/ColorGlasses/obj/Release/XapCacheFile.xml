@@ -1,18 +1,20 @@
-﻿<xapCache source="C:\web\git\Barvickator\Windows\ColorGlasses\ColorGlasses\Bin\Release\ColorGlasses.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="11.7.2012 23:30:47">
-  <file source="C:\web\git\Barvickator\Windows\ColorGlasses\ColorGlasses\Bin\Release\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="11.7.2012 20:54:56" />
+﻿<xapCache source="C:\web\git\Barvickator\Windows\ColorGlasses\ColorGlasses\Bin\Release\ColorGlasses.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="14.7.2012 0:18:12">
+  <file source="C:\web\git\Barvickator\Windows\ColorGlasses\ColorGlasses\Bin\Release\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="11.7.2012 23:34:48" />
   <file source="C:\web\git\Barvickator\Windows\ColorGlasses\ColorGlasses\Background.png" archivePath="Background.png" lastWriteTime="11.7.2012 18:51:23" />
   <file source="C:\web\git\Barvickator\Windows\ColorGlasses\ColorGlasses\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="11.7.2012 18:51:23" />
-  <file source="C:\web\git\Barvickator\Windows\ColorGlasses\ColorGlasses\obj\Release\ColorGlasses.dll" archivePath="ColorGlasses.dll" lastWriteTime="11.7.2012 23:30:46" />
+  <file source="C:\web\git\Barvickator\Windows\ColorGlasses\ColorGlasses\obj\Release\ColorGlasses.dll" archivePath="ColorGlasses.dll" lastWriteTime="14.7.2012 0:18:12" />
   <file source="C:\web\git\Barvickator\Windows\ColorGlasses\ColorGlasses\GapLib\WP7CordovaClassLib.dll" archivePath="WP7CordovaClassLib.dll" lastWriteTime="11.7.2012 18:51:23" />
-  <file source="C:\web\git\Barvickator\html5\chocolatechip-1.0.2.js" archivePath="www\chocolatechip-1.0.2.js" lastWriteTime="11.7.2012 23:27:37" />
-  <file source="C:\web\git\Barvickator\html5\index.html" archivePath="www\index.html" lastWriteTime="11.7.2012 23:23:13" />
+  <file source="C:\web\git\Barvickator\html5\barvy.js" archivePath="www\barvy.js" lastWriteTime="13.7.2012 23:57:48" />
+  <file source="C:\web\git\Barvickator\html5\chocolatechip-1.0.2.js" archivePath="www\chocolatechip-1.0.2.js" lastWriteTime="11.7.2012 23:34:48" />
+  <file source="C:\web\git\Barvickator\html5\index.html" archivePath="www\index.html" lastWriteTime="11.7.2012 23:34:48" />
   <file source="C:\web\git\Barvickator\html5\jquery.js" archivePath="www\jquery.js" lastWriteTime="11.7.2012 19:10:21" />
   <file source="C:\web\git\Barvickator\html5\jquery.mobile-1.1.0.css" archivePath="www\jquery.mobile-1.1.0.css" lastWriteTime="11.7.2012 19:09:15" />
   <file source="C:\web\git\Barvickator\html5\jquery.mobile-1.1.0.js" archivePath="www\jquery.mobile-1.1.0.js" lastWriteTime="11.7.2012 19:09:15" />
   <file source="C:\web\git\Barvickator\html5\jquery.mobile.structure-1.1.0.css" archivePath="www\jquery.mobile.structure-1.1.0.css" lastWriteTime="11.7.2012 19:09:15" />
   <file source="C:\web\git\Barvickator\html5\jquery.mobile.theme-1.1.0.css" archivePath="www\jquery.mobile.theme-1.1.0.css" lastWriteTime="11.7.2012 19:09:15" />
-  <file source="C:\web\git\Barvickator\html5\paleta.html" archivePath="www\paleta.html" lastWriteTime="11.7.2012 23:28:58" />
-  <file source="C:\web\git\Barvickator\html5\paleta.js" archivePath="www\paleta.js" lastWriteTime="11.7.2012 23:25:40" />
+  <file source="C:\web\git\Barvickator\html5\paleta.html" archivePath="www\paleta.html" lastWriteTime="14.7.2012 0:10:28" />
+  <file source="C:\web\git\Barvickator\html5\paleta.jpg" archivePath="www\paleta.jpg" lastWriteTime="14.7.2012 0:08:39" />
+  <file source="C:\web\git\Barvickator\html5\paleta.js" archivePath="www\paleta.js" lastWriteTime="14.7.2012 0:04:55" />
   <file source="C:\web\git\Barvickator\html5\themes\images\ajax-loader.gif" archivePath="www\themes\images\ajax-loader.gif" lastWriteTime="11.7.2012 19:07:48" />
   <file source="C:\web\git\Barvickator\html5\themes\images\icons-18-black.png" archivePath="www\themes\images\icons-18-black.png" lastWriteTime="11.7.2012 19:07:48" />
   <file source="C:\web\git\Barvickator\html5\themes\images\icons-18-white.png" archivePath="www\themes\images\icons-18-white.png" lastWriteTime="11.7.2012 19:07:48" />
@@ -20,9 +22,9 @@
   <file source="C:\web\git\Barvickator\html5\themes\images\icons-36-white.png" archivePath="www\themes\images\icons-36-white.png" lastWriteTime="11.7.2012 19:07:48" />
   <file source="C:\web\git\Barvickator\html5\themes\prvni.css" archivePath="www\themes\prvni.css" lastWriteTime="11.7.2012 19:42:40" />
   <file source="C:\web\git\Barvickator\html5\themes\prvni.min.css" archivePath="www\themes\prvni.min.css" lastWriteTime="11.7.2012 19:07:48" />
-  <file source="C:\web\git\Barvickator\Windows\ColorGlasses\ColorGlasses\CordovaSourceDictionary.xml" archivePath="CordovaSourceDictionary.xml" lastWriteTime="11.7.2012 23:30:46" />
+  <file source="C:\web\git\Barvickator\Windows\ColorGlasses\ColorGlasses\CordovaSourceDictionary.xml" archivePath="CordovaSourceDictionary.xml" lastWriteTime="14.7.2012 0:18:11" />
   <file source="C:\web\git\Barvickator\Windows\ColorGlasses\ColorGlasses\GapLib\WP7CordovaClassLib.dll" archivePath="GapLib\WP7CordovaClassLib.dll" lastWriteTime="11.7.2012 18:51:23" />
   <file source="C:\web\git\Barvickator\Windows\ColorGlasses\ColorGlasses\www\cordova-1.9.0.js" archivePath="www\cordova-1.9.0.js" lastWriteTime="11.7.2012 18:51:23" />
   <file source="C:\web\git\Barvickator\Windows\ColorGlasses\ColorGlasses\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="11.7.2012 18:51:23" />
-  <file source="C:\web\git\Barvickator\Windows\ColorGlasses\ColorGlasses\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="11.7.2012 20:54:56" />
+  <file source="C:\web\git\Barvickator\Windows\ColorGlasses\ColorGlasses\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="11.7.2012 23:34:48" />
 </xapCache>

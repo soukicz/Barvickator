@@ -96,6 +96,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\..\..\html5\barvy.js">
+      <Link>www\barvy.js</Link>
+    </Content>
     <Content Include="..\..\..\html5\chocolatechip-1.0.2.js">
       <Link>www\chocolatechip-1.0.2.js</Link>
     </Content>
@@ -119,6 +122,9 @@
     </Content>
     <Content Include="..\..\..\html5\paleta.html">
       <Link>www\paleta.html</Link>
+    </Content>
+    <Content Include="..\..\..\html5\paleta.jpg">
+      <Link>www\paleta.jpg</Link>
     </Content>
     <Content Include="..\..\..\html5\paleta.js">
       <Link>www\paleta.js</Link>

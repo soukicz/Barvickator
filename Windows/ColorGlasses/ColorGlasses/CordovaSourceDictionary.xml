@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- This file is auto-generated, do not edit! -jm -->
 <CordovaSourceDictionary>
+    <FilePath Value="www\barvy.js"/>
     <FilePath Value="www\chocolatechip-1.0.2.js"/>
     <FilePath Value="www\index.html"/>
     <FilePath Value="www\jquery.js"/>
@@ -9,6 +10,7 @@
     <FilePath Value="www\jquery.mobile.structure-1.1.0.css"/>
     <FilePath Value="www\jquery.mobile.theme-1.1.0.css"/>
     <FilePath Value="www\paleta.html"/>
+    <FilePath Value="www\paleta.jpg"/>
     <FilePath Value="www\paleta.js"/>
     <FilePath Value="www\themes\images\ajax-loader.gif"/>
     <FilePath Value="www\themes\images\icons-18-black.png"/>
