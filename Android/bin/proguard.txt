@@ -1,0 +1,3 @@
+# view AndroidManifest.xml #generated:28
+-keep class barvickator.simplia.cz.MainActivity { <init>(...); }
+
