@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Select oblasti</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="styly/lupa.css" type="text/css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
+        <script type="text/javascript">
+            //------------------------------------------------------------------
+            // zdroje:
+            // http://stackoverflow.com/questions/2541481/get-average-color-of-image-via-javascript
+            // http://jgestures.codeplex.com/ 
+            // https://gist.github.com/cf23f8bddb307ad4abd8
+            
+            
+            // globalni canvas a jeho context, to aby se nam lepe kreslilo v eventech
+            var kanvas;
+            var kontext;
+            // globalni lupa
+            var lupa;
+            
+            // testovaci obrazek, bude nahrazen obrazkem z kamery:
+            var obrazek = new Image();
+            obrazek.src = "colors.jpg";
+            
+            // YxY oblast se vezme kolem kliknuti (melo by byt sude cislo):
+            // value 14 je testovaci
+            var oblast = 14;
+            
+            // Wait for Cordova to connect with the device
+            // document.addEventListener("deviceready", onDeviceReady, false);
+            // misto toho pro testovani v prohlizeci:
+            window.onload = onDeviceReady;
+
+            // Cordova is ready to be used!
+            function onDeviceReady() {
+                // ziskame canvas -> context na kresleni:
+                kanvas = document.getElementById("vyberKanvas");
+                lupa = document.getElementById("lupa");
+                
+                if (kanvas && kanvas.getContext){
+                    kontext = kanvas.getContext('2d');
+                    kanvas.onclick = posunLupy;
+                }
+                
+                //nakreslime uvodni obrazek:
+                kontext.drawImage(obrazek, 0, 0);
+                
+                //centrovani lupy na zacatek do zlateho rezu
+                var koeficientZlatehoRezu = 1/(1+1/1.618);
+                var poziceX = kanvas.offsetLeft + Math.floor(koeficientZlatehoRezu * kanvas.width) - Math.floor(lupa.offsetWidth/2);
+                var poziceY = kanvas.offsetTop + Math.floor((1-koeficientZlatehoRezu) * kanvas.height / 2) - Math.floor(lupa.offsetHeight/2);
+                //barva prvni:
+                var barvaRezu = getVyrez(kanvas, poziceX, poziceY);
+                // nastaveni barvy do lupy:
+                lupa.style.background = getDominantniBarvu(barvaRezu);
+                // posun:
+                lupa.style.left =  poziceX + "px";
+                lupa.style.top = poziceY + "px";
+                // zviditelneni lupy na spravne pozici:
+                lupa.style.display = "block";
+            }
+            
+            // funkce volana pri klinutich na obrazek, posune lupu, zavola getVyrez,
+            // nastavi pozadi lupy
+            // TODO: drag lupy
+            function posunLupy(event) {
+                // souradnice kliknuti:
+                var klikX = event.offsetX;
+                var klikY = event.offsetY;
+                
+                // vycucani barevnych dat v oblasti kliku
+                var barevnaOblast = getVyrez(kanvas, klikX, klikY);
+                // nastaveni barvy do lupy:
+                lupa.style.background = getDominantniBarvu(barevnaOblast);
+                
+                // posun lupy:
+                lupa.style.left = (klikX - Math.floor(lupa.offsetWidth / 2) + kanvas.offsetLeft) + "px";
+                lupa.style.top = (klikY - Math.floor(lupa.offsetHeight / 2) + kanvas.offsetTop) + "px";
+            }
+           
+            // funcke, ktera vrati obdelnikovy vyrez oblastxoblast ve formatu RGBA,
+            // jako parametry ocekava: html5 canvas, x a y stredu obdelniku (ie. kliknuti)
+            function getVyrez(obr, X, Y) {
+                // oblast x oblast kolem kliknuti
+                var pulkaStrany;
+                var obdX, obdY; // pozdeji (osetrena) souradnice X,Y
+                var stranaX, stranaY;
+                // pokud zadani dava smysl:
+                if ((oblast >= 0) && (oblast < obr.width) && (X >= 0) && (X < obr.width) && (Y >= 0) && (Y < obr.height)){
+                    // osetreni X (oblast nesmi zasahovat mimo obrazek):
+                    pulkaStrany = Math.floor(oblast / 2);
+                    obdX = X;
+                    obdY = Y;
+                    stranaX = 2*pulkaStrany; // pouze inicializace pro kratsi kod, ale nakonec tam vazne bude cela strana X, ne polovina
+                    stranaY = 2*pulkaStrany;
+                    if ((X - pulkaStrany) < 0) {
+                        stranaX = Math.floor((X + pulkaStrany)/2);
+                        obdX = stranaX;
+                        stranaX = 2*stranaX;
+                    }
+                    if ((X + pulkaStrany) > obr.width - 1) {
+                        var posun = Math.floor((X + pulkaStrany - obr.width) / 2) + 1; // +1 na konci je pro pripad, ze X + pulkaStrany == obr.width
+                        stranaX = stranaX - 2*posun;
+                        obdX = X - posun;
+                    }
+                    if ((Y - pulkaStrany) < 0) {
+                        stranaY = Math.floor((Y + pulkaStrany)/2);
+                        obdY = stranaY;
+                        stranaY = 2*stranaY;
+                    }
+                    if ((Y + pulkaStrany) > obr.height - 1) {
+                        var posun = Math.floor((Y + pulkaStrany - obr.height) / 2) + 1; // +1 na konci je pro pripad, ze Y + pulkaStrany == obr.height
+                        stranaY = stranaY - 2*posun;
+                        obdY = Y - posun;
+                    }
+                }else {
+                    // chybne zadana sirka/vyska oblasti:
+                    stranaX = 0;
+                    stranaY = 0;
+                    obdX = 0;
+                    obdY = 0;
+                }
+                
+                // prvni dva parametry getImageData jsou x a y souradnice leveho horniho rohu oblasti:
+                var navrat = kontext.getImageData(obdX - stranaX/2, obdY - stranaY/2, stranaX, stranaY);
+                return navrat.data;
+            }
+            
+            // parametr je vystup z getImageData.data metody canvas.context, vrati se "rgb(r,g,b)",
+            // coz se da pouzit napr. jako obj.style.color = *
+            // dominantni barva se hleda jako ten pixel, ktery je nejblize vsem ostatnim
+            // - to je velmi narocne pro velke obrazky (je to n^2)
+            function getDominantniBarvu(imgData) {
+                if (!imgData) return "rgb(0,0,0)";
+                
+                var delka = imgData.length;
+
+                // ulozene vzdalenosti kazdeho vysetreneho pixelu
+                var vzdalenosti = newFilledArray(delka/4, 0); // vzdálenost [i]-tého pixelu od vsech ostatnich
+
+                // vsechny pixely poprve:
+                for (i=0; i < delka; i+=4) {
+                    // vsechny pixely po druhe:
+                    for (j=0; j < delka; j+=4) {
+                        vzdalenosti[i/4] += Math.pow(imgData[i], 2) + Math.pow(imgData[i+1], 2) + Math.pow(imgData[i+2], 2); // ignorujeme alfa kanal, ve fotografiích ho neocekavame
+                    }
+                }
+                
+                // nejmensi prvek:
+                var domPix = minPole(vzdalenosti);
+                
+                // vratime barvu:
+                return "rgb(" + imgData[domPix["index"]*4] + "," + imgData[domPix["index"]*4 + 1] + "," + imgData[domPix["index"]*4 + 2] + ")";
+            }
+            
+            // pomocna funkce na inicializaci pole
+            function newFilledArray(len, val) {
+                var rv = new Array(len);
+                while (--len >= 0) {
+                    rv[len] = val;
+                }
+                return rv;
+            }
+            
+            // pomocna funkce, hleda minimalni prvek pole a jeho index
+            function minPole(pole) {
+                if (pole.length == 0)
+                    return {'index':-1};
+                var minIndex = 0;
+                for (var i = 1; i < pole.length; i++)
+                    if (pole[i] < pole[minIndex]) 
+                        minIndex = i;
+                
+                return {'index': minIndex, 'value': pole[minIndex]};
+            }
+        </script>
+    </head>
+    <body>
+        <canvas id="vyberKanvas" width="500" height="328">
+            Používej pořádnej prohlížeč.
+            <!-- TODO: napsat lepší hlášku -->
+        </canvas>
+        <!-- div s CSS3 border-radius - zobrazuje lupu s vybranou barvou -->
+        <div id="lupa"></div>
+
+    </body>
+</html>
